@@ -1,0 +1,111 @@
+/* landing.css
+   Layout only.
+   Final calibrated version.
+*/
+
+/* Root container */
+.landing-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding: var(--space-2xl);
+  padding-top: calc(var(--space-2xl) * 1.5);
+}
+
+/* Center stack */
+.landing-center {
+  text-align: center;
+  max-width: 720px;
+}
+
+/* Logo */
+.landing-logo {
+  width: 200px;
+  height: auto;
+  margin-bottom: var(--space-2xl);
+}
+
+/* Hero line */
+.landing-lead {
+  font-size: 2.6rem;
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin-bottom: var(--space-2xl);
+  font-weight: var(--font-light);
+  font-style: italic;
+}
+
+/* Actions */
+.landing-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Primary button spacing */
+.landing-actions .btn {
+  margin-bottom: var(--space-2xl);
+}
+
+/* Secondary link */
+.landing-secondary {
+  font-size: var(--text-lg);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: var(--font-light);
+  transition: color var(--transition-base);
+}
+
+.landing-secondary:hover {
+  color: var(--text-primary);
+}
+
+/* Dao seal – bottom right */
+.dao-mark {
+  position: fixed;
+  bottom: var(--space-lg);
+  right: var(--space-lg);
+  width: 60px;
+  height: auto;
+  opacity: 1;
+  pointer-events: none;
+}
+
+/* Responsive tuning */
+@media (max-width: 768px) {
+  .landing-logo {
+    width: 180px;
+  }
+
+  .landing-lead {
+    font-size: 2.1rem;
+  }
+
+  .landing-actions .btn {
+    margin-bottom: var(--space-xl);
+  }
+
+  .dao-mark {
+    width: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-logo {
+    width: 150px;
+  }
+
+  .landing-lead {
+    font-size: 1.8rem;
+  }
+
+  .landing-actions .btn {
+    margin-bottom: var(--space-lg);
+  }
+
+  .dao-mark {
+    width: 40px;
+  }
+}

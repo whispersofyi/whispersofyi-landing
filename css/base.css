@@ -1,0 +1,83 @@
+/* Self hosted Noto Serif */
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/noto-serif-all-weights.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/noto-serif-all-weights.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Noto Serif';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/noto-serif-all-weights.woff2') format('woff2');
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base */
+body {
+  font-family: 'Noto Serif', serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-weight: var(--font-light);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8rem 2rem;
+  background: transparent;
+  color: var(--text-primary);
+  text-decoration: none;
+  border: 1.5px solid var(--text-primary);
+  border-radius: var(--radius-md);
+  font-size: var(--text-base);
+  font-weight: var(--font-regular);
+  font-family: 'Noto Serif', serif;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--text-primary);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+.btn:hover {
+  color: var(--bg-primary);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-soft);
+}
+
+.btn:hover::before {
+  opacity: 1;
+}
